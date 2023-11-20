@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标签的浮动</title>
+<style type="text/css">
+.father{                         /*定义父标签的样式*/
+	background:#eee;
+	border:1px dashed #999;
+}
+.box01,.box02,.box03{         /*定义box01、box02、box03三个盒子的样式*/
+	height:50px;
+	line-height:50px;
+	border:1px dashed #999;
+	margin:15px;
+	padding:0px 10px;
+}
+.box01{ background:#FF9;}
+.box02{ background:#FC6;}
+.box03{ background:#F90;}
+.box01,.box02,.box03{         /*定义box01、box02、box03左浮动*/
+	float:left;
+}
+p{                               /*定义段落文本的样式*/
+	background:#ccf;
+	border:1px dashed #999;
+	margin:15px;
+	padding:0px 10px;
+	clear:left;
+}
+</style>
+</head> 
+<body>
+<div class="father">
+	<div class="box01">box01</div>
+	<div class="box02">box02</div>
+	<div class="box03">box03</div>
+	<p>今天在大学校园里看到的精彩一幕， 一个男生在湖边和一个女生表白，那个女生说，你跳下去我就答应，那个男生果断跳下去了，游上来以后满身泥，女的拿纸巾过来要给这个男生擦，这个男生躲开了，说了一句特别男人的话: 我跳下去是证明我曾经真的喜欢你，但是现在我对你这种人已经没有任何兴趣了。</p>
+</div>
+</body>
+</html>

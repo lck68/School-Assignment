@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>空标签清除浮动</title>
+<style type="text/css">
+.father{                              /*不为父标签定义高度*/
+	background:#ccc; 
+	border:1px dashed #999; 
+}
+.box01,.box02,.box03{ 
+	height:50px; 
+	line-height:50px; 
+	background:#f9c; 
+	border:1px dashed #999;
+	margin:15px; 
+	padding:0px 10px; 
+	float:left;                      /*为box01、box02、box03三个盒子设置左浮动*/
+}
+.box04{ clear:both;}                /*对空标签应用clear:both;*/
+</style>
+</head> 
+<body>
+<div class="father">
+	<div class="box01">box01</div>
+	<div class="box02">box02</div>
+	<div class="box03">box03</div>
+	<div class="box04"></div>        <!--在浮动标签后添加空标签-->
+</div>
+</body>
+</html>

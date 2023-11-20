@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+/*全局控制*/
+body{font-family:"微软雅黑"; font-size:12px; color:#FFF;}
+@font-face{
+	font-family:dn;       /*服务器字体名称*/
+	src:url(dqc.ttf); /*服务器字体名称*/
+}
+/*重置浏览器的默认样式*/
+body,p,ul,li,h4,img{margin:0; padding:0; border:0; list-style:none;}
+.bg_banner{
+	width:100%;
+	background:#00214d;
+}
+.banner{
+	width:1000px;
+	height:285px;
+	margin:13px auto 15px auto;
+	overflow:hidden;                     /*防止溢出内容呈现在元素框之外*/
+}
+.left{
+	width:755px;
+	height:285px;
+	font-weight:bold;
+	background:url(pic.gif);
+	position:relative;                 /*设置父元素相对定位*/
+	float:left;
+}
+.content_left{
+	position:absolute;                 /*设置子元素绝对定位 */
+	top:75px;
+	right:45px;
+	text-align:right;                  /*设置文本内容右对齐*/
+}
+.school_en{
+	font-size:14px;                    /*设置英文字号*/
+}
+.school_ch{
+	font-size:36px;
+	font-family:dn;                /*设置传智播客字体样式*/   
+	border-right:5px solid #F90;
+	padding-right:10px;
+}
+.advertise{
+	margin-top:20px;
+	font-size:16px;
+}
+ul.style_a{
+	margin-top:25px;
+	margin-left:120px;
+	list-style:none;
+	overflow:hidden;                   /*防止溢出内容呈现在元素框之外*/
+}
+ul.style_a li{
+	float:left;                         /*设置浮动属性*/
+	margin-left:10px;
+}
+ul.style_a li a{                        /*设置banner广告图切换图标样式*/
+	background:#FFF;
+	width:46px;
+	height:3px;
+	text-align:center;
+	line-height:22px;
+	display:block;                      /* 把行内元素转为块元素*/
+	font-size:18px;
+	opacity:0.3;
+}
+ul.style_a li.current a{opacity:0.8;}             /*设置第一个切换图标样式*/
+
+.right{
+	width:245px;
+	height:285px;
+	background:rgba(255,255,255,0.2);
+	float:right;
+	position:relative;              /*设置父元素相对定位*/
+}
+.content_right{
+	position:absolute;              /*设置子元素绝对定位*/
+	top:50px;
+	left:30px;
+}
+ul.style_icon{
+	margin-top:10px;
+}
+ul.style_icon li{
+	float:left;                     /*设置浮动属性*/
+	margin-right:12px;
+}
+.cl{                                  /*设置清除浮动属性*/
+	margin-top:55px;
+	margin-right:30px;
+	line-height:24px;
+}

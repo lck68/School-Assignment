@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标签的定位</title>
+<style type="text/css">
+body{ margin:0px; padding:0px; font-size:18px; font-weight:bold;}
+.father{
+	margin:10px auto;
+	width:300px;
+	height:300px;
+	padding:10px;
+	background:#ccc;
+	border:1px solid #000;
+}
+.child01,.child02,.child03{
+	width:100px;
+	height:50px;
+	line-height:50px;
+	background:#ff0;
+	border:1px solid #000;
+	margin:10px 0px;
+	text-align:center;
+}
+.child02{
+	position:absolute;         /*绝对定位*/
+	left:150px;                 /*距左边线150px*/
+	top:100px;                  /*距顶部边线100px*/
+}
+
+</style>
+</head>
+<body>
+<div class="father">
+	<div class="child01">child-01</div>
+	<div class="child02">child-02</div>
+     <div class="child03">child-03</div>
+</div>
+</body>
+</html>
