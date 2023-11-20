@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>autofocus属性的使用</title>
+</head>
+<body>
+<form action="#" method="get" id="user_form">
+请输入您的姓名：<input type="text" name="first_name"/>
+<input type="submit" value="提交" />	
+</form>
+<p>下面的输入框在form元素外，但因为指定了form属性为表单的id，所以该输入框仍然属于表单的一部分。</p>
+请输入您的昵称：<input type="text" name="last_name" form="user_form"/><br/>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>划分表格的结构</title>
+</head>
+<body>
+    <table width="600" border="1" cellspacing="0" align="center">
+        <caption>表格的名称</caption>              <!--caption定义表格的标题-->
+        <thead>                                      <!--thead定义表格的头部-->
+            <tr>
+                <td colspan="3">网站的logo</td>
+            </tr>
+            <tr>
+            <th><a href="#">首页</a></th>
+            <th><a href="#">关于我们</a></th>
+            <th><a href="#">联系我们</a></th>
+            </tr>
+        </thead>
+        <tfoot>                                      <!--tfoot定义表格的页脚-->
+            <tr>
+                <td colspan="3" align="center">底部基本企业信息&copy;【版权信息】</td>
+            </tr>	
+        </tfoot>
+        <tbody>                                      <!--tbody定义表格的主体-->
+            <tr height="150">
+                <td>主体的左栏</td>
+                <td>主体的中间</td>
+                <td>主体的右侧</td>		
+            </tr>
+            <tr height="150">
+                <td>主体的左栏</td>
+                <td>主体的中间</td>
+                <td>主体的右侧</td>		
+            </tr>
+        </tbody>   
+    </table>
+</body>
+</html>

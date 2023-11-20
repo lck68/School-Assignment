@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+/*全局控制*/
+body{font-size:12px; font-family:"宋体"; color:#222;}
+/*重置浏览器的默认样式*/
+body,h2,ul,li{ padding:0; margin:0; list-style:none;}
+.all{            /*控制最外层的大盒子*/
+	width:300px;
+	height:200px;
+	margin:20px auto;
+}
+	.head{
+		font-size:12px;
+		color:#fff;
+		height:30px;
+		line-height:30px;
+		border-bottom:5px solid #cc5200;     /*单独定义下边框进行覆盖*/
+		background:#f60 url(title_bg.png) no-repeat 11px 7px;
+		padding-left:34px;
+	}
+.content{
+	padding:25px 0 0 15px;
+	background:#fff5ee;
+	}
+.content li{
+	height:26px;
+	background:url(li_bg.png) no-repeat left top;
+	padding-left:22px;
+
+}
+.content li a:link,.content li a:visited{   /*未点击和点击后的样式*/
+	color:#666;
+	text-decoration:none;
+}                                           
+.content li a:hover{                       /*鼠标移上时的样式*/
+	color:#F60;
+}

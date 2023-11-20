@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>单元格的合并</title>
+</head>
+<body>
+<table border="1" width="400" height="240" align="center"> 
+	<tr height="80" align="center" valign="top" bgcolor="#00CCFF">
+        <td>姓名</td>
+        <td colspan="2">性别</td>
+        <td>住址</td>
+    </tr>
+    <tr>
+    	   <td>小王</td>
+        <td>女</td>
+        <td>11122233</td>
+        <td rowspan="3">北京</td>         <!--rowspan设置单元格竖跨的行数-->
+    </tr>
+    <tr>
+    	   <td>小李</td>
+        <td>男</td>
+        <td>55566677</td>
+                                              <!--删除了<td>朝阳区</td>-->
+    </tr>
+    <tr>
+    	   <td>小张</td>
+        <td>男</td>
+        <td>88899900</td>
+                                              <!--删除了 <td>西城区</td>-->
+    </tr>
+</table>
+</body>
+</html>

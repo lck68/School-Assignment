@@ -1,0 +1,81 @@
+/*全局控制*/
+body{font-size:12px; font-family:"宋体"; color:#515151;}
+/*重置浏览器的默认样式*/
+body,h2,form,table{padding:0; margin:0;}
+#box{                           /*控制最外层的大盒子*/        
+	 width:660px;
+	 height:600px;
+	 border:1px solid #CCC;
+	 padding:20px; 
+	 margin:50px auto 0; 
+}
+.header{                    /*控制标题*/
+	font-size:22px;
+	color:#0b0b0b;
+	padding-bottom:30px;
+}    
+.header span{             /*控制标题中的小号字体*/
+	font-size:12px;
+	font-weight:normal;
+}  
+td{padding-bottom:26px;}
+td.left{
+	width:78px;
+	text-align:right;    /*使提示信息居右对齐*/
+	padding-right:8px;   /*拉开提示信息和表单控件间的距离*/
+}
+.red{color:#F00;}         /*控制提示信息中星号的颜色*/
+.txt01,.txt02{           /*定义前两个单行文本输入框相同的样式*/
+	width:264px;
+	height:12px;
+	border:1px solid #CCC;
+	padding:3px 3px 3px 26px;
+	font-size:12px;
+	color:#949494;
+}
+.txt01{                 /*定义第一个单行文本输入框的背景图像*/
+	background:url(img/name.png) no-repeat 2px center;
+}    
+.txt02{                 /*定义第二个单行文本输入框的背景图像*/
+	background:url(img/phone.png) no-repeat 2px center;
+}  
+.txt03{                 /*定义第三个单行文本输入框的样式*/
+	width:122px;
+	height:12px;
+	padding:3px 3px 3px 26px;
+	font-size:12px;
+	background:url(img/email.png) no-repeat 2px center;
+}
+.course{ width:184px;}  /*定义下拉菜单的宽度*/
+.message{                 /*定义多行文本输入框的样式*/
+	width:432px;
+	height:164px;
+	font-size:12px;
+	color:#949494;
+	padding:3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

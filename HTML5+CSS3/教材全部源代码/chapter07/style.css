@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-size:18px; font-family:"微软雅黑"; background:url(timg.jpg) no-repeat top center; color:#FFF;}       
+form,p{ padding:0; margin:0; border:0;}   /*重置浏览器的默认样式*/
+form{
+	width:420px;
+	height:200px;
+	padding-top:60px;
+	margin:250px auto;                      /*使表单在浏览器中居中*/
+	background:rgba(255,255,255,0.1);    /*为表单添加背景颜色*/
+	border-radius:20px;
+	border:1px solid rgba(255,255,255,0.3);
+	} 
+p{
+	margin-top:15px; 
+	text-align:center;
+ } 
+p span{
+	width:60px;
+	display:inline-block; 
+	text-align:right;
+	} 
+.num,.pass{                /*对文本框设置共同的宽、高、边框、内边距*/ 
+	width:165px; 
+	height:18px; 
+	border:1px solid rgba(255,255,255,0.3);
+    padding:2px 2px 2px 22px; 
+	border-radius:5px;
+	color:#FFF;
+	} 
+.num{             /*定义第一个文本框的背景、文本颜色*/
+	background:url(3.png) no-repeat 5px center rgba(255,255,255,0.1);
+    } 
+.pass{            /*定义第二个文本框的背景*/
+    background: url(4.png) no-repeat 5px center rgba(255,255,255,0.1);
+     }
+.btn01{
+	width:190px; 
+	height:25px; 
+	border-radius:3px;       /*设置圆角边框*/ 
+	border:2px solid #000; 
+	margin-left:65px;
+	background:#57b2c9;
+	color:#FFF;
+	border:none;
+	}   

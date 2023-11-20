@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>超链接的伪类选择器</title>
+<style type="text/css">
+a{ margin-right:20px;}      /*设置右边距为20px*/
+a:link,a:visited{        
+	color:#000;              /*设置默认和被访问之的后颜色为黑色*/
+	text-decoration:none;  /*设置<a>标签自带下划线的效果为无*/
+	}     
+a:hover{
+	 color:#093;             /*默认样式颜色为绿色*/
+	 text-decoration:underline; /*设置鼠标悬停时显示下划线*/
+	 }    
+a:active{ color:#FC0;}     /*设置鼠标点击不放时颜色为黄色*/
+</style>
+</head>
+<body>
+<a href="#">公司首页</a>
+<a href="#">公司简介</a>
+<a href="#">产品介绍</a>
+<a href="#">联系我们</a>
+</body>
+</html>
