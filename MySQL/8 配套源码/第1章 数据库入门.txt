@@ -1,0 +1,23 @@
+操作MySQL:
+
+（1）设置MySQL登录密码
+mysql_secure_installation
+（2）登录MySQL
+mysql -uroot -pitcast
+（3）查看数据库
+show databases;
+----------------------------------------------------------------------------------------------------
+
+【例1-1】使用“\s”命令查看数据库信息：
+
+\s
+
+【例1-2】使用“\u”命令切换数据库：
+
+\u test
+
+
+
+#修改MySQL客户端的字符集编码：
+
+set character_set_client = gbk

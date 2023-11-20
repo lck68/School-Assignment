@@ -1,0 +1,176 @@
+¡¾Àý4-1¡¿
+#½¨¿â
+CREATE DATABASE chapter04;
+#½¨±í
+USE chapter04;
+CREATE TABLE student(
+id INT(3) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(20) NOT NULL,
+grade FLOAT,
+gender CHAR(2)
+);
+#²åÈëÊý¾Ý
+INSERT INTO student(name,grade,gender)
+VALUES('songjiang',40,'ÄÐ'),
+('wuyong',100,'ÄÐ'),
+('qinming',90,'ÄÐ'),
+('husanniang',88,'Å®'),
+('sunerniang',66,'Å®'),
+('wusong',86,'ÄÐ'),
+('linchong',92,'ÄÐ'),
+('yanqing',90,NULL);
+
+#²éÑ¯Óï¾ä
+SELECT id,name,grade,gender FROM student;
+
+¡¾Àý4-2¡¿
+SELECT * FROM student;
+
+¡¾Àý4-3¡¿
+SELECT name,gender FROM student;
+
+¡¾Àý4-4¡¿
+SELECT id,name FROM student WHERE id=4;
+
+¡¾Àý4-5¡¿
+SELECT name,gender FROM student  WHERE name='wusong';
+
+¡¾Àý4-6¡¿
+SELECT name,grade FROM student WHERE grade>80;
+
+¡¾Àý4-7¡¿
+SELECT id,grade,name,gender FROM student WHERE id IN(1,2,3);
+
+¡¾Àý4-8¡¿
+SELECT id,grade,name,gender FROM student WHERE id NOT IN(1,2,3);
+
+¡¾Àý4-9¡¿
+SELECT id,name FROM student WHERE id BETWEEN 2 AND 5;
+
+¡¾Àý4-10¡¿
+SELECT id,name FROM student WHERE id NOT BETWEEN 2 AND 5;
+
+¡¾Àý4-11¡¿
+SELECT id,name,grade,gender FROM student WHERE gender IS NULL;
+
+¡¾Àý4-12¡¿
+SELECT id,name,grade,gender FROM student WHERE gender IS NOT NULL;
+
+¡¾Àý4-13¡¿
+SELECT DISTINCT gender FROM student;
+
+¡¾Àý4-14¡¿
+#²åÈëÊý¾Ý
+INSERT INTO student(name,grade,gender)
+VALUES('songjiang',20,'ÄÐ');
+
+#²éÑ¯
+SELECT DISTINCT gender,name FROM student;
+
+¡¾Àý4-15¡¿
+SELECT id,name FROM student WHERE name LIKE "s%";
+
+¡¾Àý4-16¡¿
+SELECT id,name FROM student WHERE name LIKE 'w%g';
+
+¡¾Àý4-17¡¿
+SELECT id,name FROM student WHERE name LIKE '%y%';
+
+¡¾Àý4-18¡¿
+SELECT id,name  FROM student WHERE name NOT LIKE '%y%';
+
+¡¾Àý4-19¡¿
+SELECT * FROM student WHERE name LIKE 'wu_ong';	
+
+¡¾Àý4-20¡¿
+SELECT * FROM student WHERE name LIKE '____ing';
+
+¡¾Àý4-21¡¿
+#²åÈë¼ÇÂ¼
+INSERT INTO student(name,grade,gender)  VALUES('sun%er',95,'ÄÐ');
+
+#²éÑ¯
+SELECT * FROM student WHERE name LIKE '%\%%';
+
+¡¾Àý4-22¡¿
+SELECT id,name,gender FROM student WHERE id<5 AND gender='Å®';
+
+¡¾Àý4-23¡¿
+SELECT id,name,grade,gender
+FROM student
+WHERE id in(1,2,3,4) AND name LIKE '%ng' AND grade<80;
+
+¡¾Àý4-24¡¿
+SELECT id,name,gender FROM student WHERE id<3 OR gender='Å®';
+
+¡¾Àý4-25¡¿
+SELECT id,name,grade,gender
+FROM student
+WHERE name LIKE 'h%' OR gender='Å®' OR grade=100;
+
+Àý4-26¡¿
+SELECT name,grade,gender
+FROM student
+WHERE gender='Å®' OR gender='ÄÐ' AND grade=100;
+
+¡¾Àý4-27¡¿
+SELECT COUNT(*) FROM student;
+
+¡¾Àý4-28¡¿
+SELECT SUM(grade) FROM student;
+
+¡¾Àý4-29¡¿
+SELECT AVG(grade) FROM student;
+
+¡¾Àý4-30¡¿
+SELECT MAX(grade) FROM student;
+
+¡¾Àý4-31¡¿
+SELECT MIN(grade) FROM student;
+
+¡¾Àý4-32¡¿
+SELECT * FROM student
+ORDER BY grade;
+
+¡¾Àý4-33¡¿
+SELECT * FROM student ORDER BY grade ASC;
+
+¡¾Àý4-34¡¿
+SELECT * FROM student ORDER BY grade DESC;
+
+¡¾Àý4-35¡¿
+SELECT * FROM student
+ORDER BY gender ASC,grade DESC;
+
+¡¾Àý4-36¡¿
+SELECT * FROM student GROUP BY gender;
+
+¡¾Àý4-37¡¿
+SELECT COUNT(*),gender FROM student GROUP BY gender;
+
+¡¾Àý4-38¡¿
+SELECT sum(grade),gender FROM student GROUP BY gender HAVING SUM(grade)<300;
+
+¡¾Àý4-39¡¿
+SELECT * FROM student LIMIT 4;
+
+¡¾Àý4-40¡¿
+SELECT * FROM student ORDER BY grade DESC LIMIT 4,4;
+
+¡¾Àý4-41¡¿
+SELECT CONCAT(id,'_',name,'_',grade,'_',gender) FROM student;
+
+¡¾Àý4-42¡¿
+SELECT id,IF(gender='ÄÐ',1,0) FROM student;
+
+¡¾Àý4-43¡¿
+SELECT * FROM student AS s WHERE s.gender='Å®';
+
+¡¾Àý4-44¡¿
+SELECT name AS stu_name,gender stu_gender FROM student;
+
+
+
+
+
+

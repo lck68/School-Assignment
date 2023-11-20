@@ -1,0 +1,95 @@
+#建库、建表、添加数据
+CREATE DATABASE chapter08;
+USE chapter08;
+CREATE TABLE student(
+	id int primary key auto_increment,
+	name varchar(20),
+	age int	
+);
+INSERT INTO student(name,age) VALUES ('Tom',20);
+INSERT INTO student(name,age) VALUES ('Jack',16);
+INSERT INTO student(name,age) VALUES ('Lucy',18);
+#查询结果
+SELECT * FROM student;
+
+【例8-1】
+mysqldump -uroot -pitcast chapter08>C:/backup/chapter08_20140305.sql
+
+-----------------------------------------------------------------------------------------
+8.1.2	数据的还原
+
+（1） 删除数据库
+DROP DATABASE chapter08;
+
+（2） 创建数据库
+CREATE DATABASE chapter08;
+
+（3） 还原数据
+mysql -uroot -pitcast chapter08 <C:/backup/chapter08_20140305.sql
+
+-----------------------------------------------------------------------------------------
+8.2.2	创建普通用户
+#GRANT创建用户
+GRANT SELECT ON chapter08.student TO 'user1'@'localhost' IDENTIFIED BY '123'; 
+#查看用户
+SELECT host,user,password FROM user;
+
+#CREATE USER语句创建用户
+CREATE USER 'user2'@'localhost' IDENTIFIED BY '123';
+#查看用户
+ SELECT host,user,password FROM user;
+
+#INSERT语句创建用户
+INSERT INTO mysql.user(Host,User,Password,ssl_cipher,x509_issuer,x509_subject)
+VALUES('localhost','user3',PASSWORD('123'),'','','');
+
+#查看用户
+ SELECT host,user,password FROM user;
+
+-----------------------------------------------------------------------------------------
+8.2.3	删除普通用户
+#使用DROP USER语句删除用户
+DROP USER 'user1'@'localhost';
+
+#DELETE语句删除用户
+DELETE FROM mysql.user WHERE Host='localhost' AND User='user2';
+
+-----------------------------------------------------------------------------------------
+8.2.4	修改用户密码
+
+#使用mysqladmin命令修改root用户密码
+mysqladmin -u root -p password mypwd1
+
+#使用UPDATE语句修改root用户密码
+UPDATE mysql.user SET Password=PASSWORD('mypwd2') WHERE User='root' and Host='localhost';
+
+#使用SET语句修改root用户的密码
+SET PASSWORD=password('mypwd3');
+
+#使用GRANT语句修改普通用户密码
+GRANT USAFE ON *.* TO 'username'@'localhost' IDENTIFIED BY [PASSWORD]'new_password';
+
+#使用UPDATE语句修改普通用户的密码
+UPDATE mysql.user set Password=PASSWORD('new_password')
+WHERE User='username' and Host='hostname';
+
+#使用SET语句修改普通用户的密码
+SET PASSWORD FOR'username'@'hostname'=PASSWORD('new_password');
+
+#普通用户修改密码
+SET PASSWORD=PASSWORD('new_password');
+-----------------------------------------------------------------------------------------
+8.3.2	授予权限
+GRANT INSERT,SELECT ON *.* TO 'user4'@'localhost' IDENTIFIED BY '123'
+WITH GRANT OPTION;
+#查看
+use mysql;
+ SELECT Host,User,Password,Insert_priv,Select_priv,Grant_priv FROM mysql.user 
+WHERE user='user4'\G
+
+#使用SHOW GRANTS语句查询root用户的权限
+SHOW GRANTS FOR 'root'@'localhost';
+
+#使用REVOKE语句收回user4用户的INSERT权限
+
+REVOKE INSERT ON *.* FROM 'user4'@'localhost';

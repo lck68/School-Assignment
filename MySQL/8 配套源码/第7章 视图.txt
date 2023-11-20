@@ -1,0 +1,167 @@
+【例7-1】
+#建库
+CREATE DATABASE chapter07;
+#建表
+USE chapter07;
+CREATE TABLE student(
+		s_id INT(3),
+		name VARCHAR(20),
+		math FLOAT,
+		chinese FLOAT
+);
+#添加数据
+INSERT INTO student(s_id,name,math,chinese) VALUES (1,'Tom',80,78);
+INSERT INTO student(s_id,name,math,chinese) VALUES (2,'Jack',70,80);
+INSERT INTO student(s_id,name,math,chinese) VALUES (3,'Lucy',97,95);
+#创建视图
+CREATE VIEW view_stu AS SELECT math,chinese,math+chinese FROM student;
+#查看视图
+SELECT * FROM view_stu;
+
+【例7-2】
+CREATE VIEW view_stu2(math,chin,sum) AS SELECT math,chinese,math+chinese FROM student;
+#查看视图
+SELECT * FROM view_stu2;
+
+【例7-3】
+#建表
+ CREATE TABLE stu_info(
+  s_id INT(3),
+ glass VARCHAR(50),
+   addr VARCHAR(100)
+);
+#添加数据
+INSERT INTO stu_info(s_id,glass,addr) VALUES (1,'erban','anhui');
+INSERT INTO stu_info(s_id,glass,addr) VALUES (2,'sanban','chongqing');
+INSERT INTO stu_info(s_id,glass,addr) VALUES (3,'yiban','shandong');
+#查询结果
+SELECT * FROM stu_info;
+
+#创建视图
+CREATE VIEW stu_glass(id,NAME,glass) 
+AS 
+SELECT student.s_id ,student.name,stu_info.glass 
+FROM student,stu_info 
+WHERE student.s_id=stu_info.s_id;
+#查看视图
+SELECT * FROM stu_glass;
+
+【例7-4】
+DESCRIBE stu_glass;
+
+【例7-5】
+SHOW TABLE STATUS LIKE 'stu_glass'\G
+
+【例7-6】
+SHOW CREATE VIEW stu_glass\G
+
+【例7-7】
+CREATE OR REPLACE VIEW view_stu AS SELECT * FROM student;
+
+【例7-8】
+ALTER VIEW view_stu AS SELECT chinese FROM student;
+
+【例7-9】
+UPDATE view_stu SET chinese = 100;
+
+#查看视图
+ SELECT * FROM view_stu2;
+
+【例7-10】
+INSERT INTO student VALUES(4,'Lily',100,100);
+
+#查看视图
+ SELECT * FROM view_stu2;
+【例7-11】
+DELETE FROM view_stu2 WHERE math=70;
+
+#查看视图
+ SELECT * FROM view_stu2;
+
+【例7-12】
+DROP VIEW IF EXISTS view_stu2;
+
+#查看视图
+ SELECT * FROM view_stu2;
+
+-------------------------------------------------------------------------------------------------
+7.3	应用案例—视图的应用
+（1）
+#建表
+CREATE TABLE stu
+    (
+    s_id INT(11) PRIMARY KEY,
+    s_name VARCHAR(20) NOT NULL,
+    addr VARCHAR(50) NOT NULL,
+    tel VARCHAR(50) NOT NULL
+   );
+
+#添加数据
+INSERT INTO stu
+     VALUES(1,'ZhangPeng','Hebei','13889075861'),
+     (2,'LiXiao','Shandong','13953508223'),
+     (3,'HuangYun','Shandong','13905350996');
+#查询结果
+SELECT * FROM stu;
+（2）
+#建表
+CREATE TABLE sign
+    (
+     s_id INT(11) PRIMARY KEY,
+     s_name VARCHAR(20) NOT NULL,
+     s_sch VARCHAR(50) NOT NULL,
+     s_sign_sch VARCHAR(50) NOT NULL
+   );
+#添加数据
+ INSERT INTO sign
+     VALUES(1,'ZhangPeng','High School1','Peking University'),
+     (2,'LiXiao','High School2','Peking University'),
+     (3,'HuangYun','High School3','Tsinghua University');
+#查询结果
+SELECT * FROM sign;
+（3）
+#建表
+CREATE TABLE stu_mark
+   (
+     s_id INT(11) PRIMARY KEY,
+     s_name VARCHAR(20) NOT NULL,
+     mark INT NOT NULL
+     );
+#添加数据
+INSERT INTO stu_mark VALUES(1,'ZhangPeng',730),(2,'LiXiao'
+,725),(3,'HuangYun',736);
+
+#查询结果
+ SELECT * FROM stu_mark;
+（4）
+#创建视图
+CREATE 
+VIEW beida(id,NAME,mark,sch)
+AS 
+SELECT stu_mark.s_id,stu_mark.s_name,stu_mark.mark,sign.s_sign_sch
+FROM stu_mark,SIGN
+WHERE stu_mark.s_id=sign.s_id 
+     AND stu_mark.mark >=720 
+     AND sign.s_sign_sch='Peking University';
+#查看视图
+SELECT * FROM beida;
+（5）
+#创建视图
+CREATE 
+VIEW qinghua(id,NAME,mark,sch)
+AS 
+SELECT stu_mark.s_id,stu_mark.s_name,stu_mark.mark,sign.s_sign_sch
+FROM stu_mark,SIGN
+WHERE stu_mark.s_id=sign.s_id 
+    AND stu_mark.mark >=725 
+    AND sign.s_sign_sch='Tsinghua University';
+#查看视图
+SELECT * FROM qinghua;
+（6）
+#更新视图
+UPDATE stu_mark SET mark=mark-10 WHERE stu_mark.s_name='HuangYun';
+
+
+
+
+

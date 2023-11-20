@@ -1,0 +1,265 @@
+#建库、建表、添加数据
+CREATE DATABASE chapter06;
+USE chapter06;
+CREATE TABLE account(
+	id INT primary key auto_increment,
+	name VARCHAR(40),
+	money FLOAT
+); 
+INSERT INTO account(name,money) VALUES('a',1000);
+INSERT INTO account (name, money) VALUES ('b', 1000);
+
+【例6-1】
+START TRANSACTION;
+UPDATE account SET money=money-100 WHERE NAME='a';
+UPDATE account SET money=money+100 WHERE NAME='b';
+COMMIT;
+
+#查询
+ SELECT * FROM account;
+-----------------------------------------------------------------------------------------------
+6.1.2	事务的提交
+
+#使用UPDATE语句实现由b账户向a账户转100元钱的转账功能，
+START TRANSACTION;
+UPDATE account SET money=money+100 WHERE name='a';
+UPDATE account SET money=money-100 WHERE name='b';
+
+#查询
+ SELECT * FROM account;
+
+#使用commit语句来提交事务
+START TRANSACTION;
+UPDATE account SET money=money+100 WHERE name='a';
+UPDATE account SET money=money-100 WHERE name='b';
+COMMIT;
+
+------------------------------------------------------------------------------------------------
+
+6.1.3	事务的回滚
+
+#使用UPDATE语句实现由b账户向a账户转100元钱的转账功能，
+START TRANSACTION;
+UPDATE account SET money=money+100 WHERE name='a';
+UPDATE account SET money=money-100 WHERE name='b';
+
+#事务回滚
+ROLLBACK;
+
+------------------------------------------------------------------------------------------------
+
+6.1.4	事务的隔离级别
+（1）设置B账户中事务的隔离级别
+SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+#查询事务隔离级别
+SELECT @@tx_isolation;
+
+（2）演示脏读
+
+START TRANSACTION;
+UPDATE account SET money=money-100 WHERE name='a';
+UPDATE account SET money=money+100 WHERE name='b';
+
+#查询
+SELECT * FROM account;
+（3）设置b账户中事务的隔离级别
+SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+（4）验证是否出现脏读
+START TRANSACTION; 
+
+START TRANSACTION;
+UPDATE account SET money=money-100 WHERE name='a';
+UPDATE account SET money=money+100 WHERE name='b';
+
+#查询
+SELECT * FROM account;
+
+------------------------------------------------------------------------------------------------
+6.2	存储过程的创建
+
+#建表
+USE chapter06;
+CREATE TABLE student(
+id INT(3) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(20) NOT NULL,
+grade FLOAT,
+gender CHAR(2)
+);
+
+#添加数据
+INSERT INTO student(name,grade,gender)
+VALUES('tom',60,'男'),
+('jack',70,'男'),
+('rose',90,'女'),
+('lucy',100,'女');
+
+【例6-2】
+CREATE PROCEDURE Proc()
+BEGIN
+SELECT * FROM student;
+END;
+
+【例6-3】
+DECLARE s_grade FLOAT;
+DECLARE s_gender CHAR(2);
+SELECT grade, gender INTO s_grade, s_gender
+FROM student WHERE name = 'rose';
+
+【例6-4】
+//方法一：使用sqlstate_value
+DECLARE command_not_allowed CONDITION FOR SQLSTATE'42000';
+//方法二：使用mysql_error_code
+DECLARE command_not_allowed CONDITION FOR 1148;
+
+【例6-5】
+//方法一：捕获sqlstate_value
+DECLARE CONTINUE HANDLER FOR SQLSTATE '42S02'SET @info='NO_SUCH_TABLE';
+
+//方法二：捕获mysql_error_code
+DECLARE CONTINUE HANDLER FOR 1146 SET @info='NO_SUCH_TABLE';
+
+//方法三：先定义条件，然后调用
+DECLARE no_such_table CONDITION FOR 1146;
+DECLARE CONTINUE HANDLER FOR NO_SUCH_TABLE SET @info='ERROR';
+
+//方法四：使用SQLWARNING
+DECLARE EXIT HANDLER FOR SQLWARNING SET @info='ERROR';
+
+//方法五：使用NOT FOUND
+DECLARE EXIT HANDLER FOR NOT FOUND SET @info='NO_SUCH_TABLE';
+
+//方法六：使用SQLEXCEPTION
+DECLARE EXIT HANDLER FOR SQLEXCEPTION SET @info='ERROR';
+
+【例6-6】
+	 mysql> CREATE TABLE test.t(s1 int,primary key(s1));
+Query OK, 0 rows affected (0.44 sec)
+
+mysql> DELIMITER //
+mysql>  CREATE PROCEDURE demo()
+     ->  BEGIN
+    ->  DECLARE CONTINUE HANDLER FOR SQLSTATE '23000' SET @x2=1;
+    ->  SET @x=1;
+    ->  INSERT INTO test.t VALUES(1);
+    ->  SET @x=2;
+    ->   INSERT INTO test.t VALUES(1);
+    ->  SET @x=3;
+    ->  END; //
+Query OK, 0 rows affected (0.09 sec)
+mysql> DELIMITER ;
+
+mysql> CALL demo();
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> SELECT @x ;
++------+
+| @x   |
++------+
+|    3 |
++------+
+1 row in set (0.00 sec)
+
+【例6-7】
+CASE val
+		WHEN 1 THEN SELECT 'val is 1';
+		WHEN 2 THEN SELECT 'val is 2';
+		ELSE SELECT 'val is not 1or 2';
+END CASE;
+
+【例6-8】
+DECLARE id INT DEFAULT 0;
+add_loop:LOOP
+SET id=id+1;
+		IF id>=10 THEN  LEAVE add_loop;
+		END IF;
+END LOOP add_loop;
+
+【例6-9】
+CREATE PROCEDURE doiterate()
+BEGIN 
+DECLARE p1 INT DEFAULT 0;
+my_loop:LOOP
+		SET p1=p1+1;
+		IF p1<10 THEN ITERATE my_loop;
+		ELSEIF p1>20 THEN LEAVE my_loop;
+		END IF;
+		SELECT 'p1 is between 10 and 20';
+END LOOP my_loop;
+END
+
+【例6-10】
+	DECLARE id INT DEFAULT 0;
+	REPEAT
+	SET id=id+1;
+	UNTIL id>=10;
+	END REPEAT;
+
+【例6-11】
+DECLARE i INT DEFAULT 0;
+WHILE i <10 DO
+SET i=i+1;
+END WHILE;
+
+【例6-12】
+1、定义存储过程：
+DELIMITER //
+
+CREATE PROCEDURE CountProc1(IN s_gender VARCHAR(50),OUT num INT)
+
+BEGIN
+
+SELECT COUNT(*) INTO num FROM student WHERE gender = s_gender;
+
+END //
+
+DELIMITER ;
+2、调用存储过程：
+ CALL CountProc1("女",@num);
+3、查看返回结果：
+ SELECT @num;
+
+【例6-13】
+ SHOW PROCEDURE STATUS LIKE'C%'\G
+
+【例6-14】
+SHOW CREATE PROCEDURE chapter06.CountProc1\G
+
+【例6-15】
+ALTER PROCEDURE CountProc1
+MODIFIES SQL DATA
+SQL SECURITY INVOKER;
+
+#从information_schema.Routines表中查看存储过程的信息
+
+SELECT * FROM  information_schema.Routines
+WHERE ROUTINE_NAME='CountProc1' AND ROUTINE_TYPE='PROCEDURE
+
+【例6-16】
+DROP PROCEDURE CountProc1;
+------------------------------------------------------------------------------------------------
+6.4	综合案例—存储过程应用
+
+#建表
+CREATE TABLE stu(id INT,name VARCHAR(50),class VARCHAR(50));
+INSERT INTO stu VALUE (1,'Lucy','class1'),(2,'Tom','class1'),(3,'Rose','class2');
+
+#创建存储过程
+CREATE PROCEDURE addcount(out count INT)
+BEGIN
+DECLARE itmp INT;
+DECLARE cur_id CURSOR FOR SELECT id FROM stu;
+DECLARE EXIT HANDLER FOR NOT FOUND CLOSE cur_id;
+SELECT count(*) INTO count FROM stu;
+SET @sum=0;
+OPEN cur_id;
+REPEAT
+FETCH cur_id INTO itmp;
+IF itmp<10
+THEN SET @sum=  @sum+itmp;
+END IF;
+UNTIL 0 END REPEAT;
+CLOSE cur_id;
+END ;
+
+

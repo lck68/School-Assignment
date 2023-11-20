@@ -1,0 +1,157 @@
+【例3-1】
+#创建数据库：
+CREATE DATABASE chapter03;
+
+#选择使用数据库chapter03：
+USE chapter03;
+
+#创建student表：
+CREATE TABLE student(
+   id   INT(4),
+   name    VARCHAR(20) NOT NULL,
+   grade    FLOAT
+);
+
+#插入一条数据：
+INSERT INTO student(id,name,grade) 
+VALUES(1,'zhangsan',98.5);
+
+#查询
+SELECT * FROM student;
+
+
+【例3-2】
+INSERT INTO student(name,grade,id)
+VALUES('lisi',95,2);
+
+#查询
+SELECT * FROM student;
+
+【例3-3】
+INSERT INTO student
+VALUES(3,'lisi',61.5);
+
+#查询
+SELECT * FROM student;
+
+【例3-4】
+INSERT INTO student(id,name)
+VALUES(4,'zhaoliu');
+
+#查询
+SELECT * FROM student;
+
+#查询表结构
+SHOW CREATE TABLE student\G
+
+
+【例3-5】
+INSERT INTO student(id,grade) 
+VALUES(5,97);
+
+#查询
+SELECT * FROM student;
+
+【例3-6】
+INSERT INTO student(grade,name)
+VALUES(55,'sunbin');
+
+#查询
+SELECT * FROM student;
+
+【例3-7】
+INSERT INTO student
+SET id=5,name='boya',grade=99;
+
+#查询
+SELECT * FROM student;
+
+【例3-8】
+INSERT INTO student VALUES
+(6,'lilei',99),
+(7,'hanmeimei',100),
+(8,'poly',40.5);
+
+#查询
+SELECT * FROM student;
+
+【例3-9】
+INSERT INTO student(id,name) VALUES
+(9,'liubei'),(10,'guanyu'),(11,'zhangfei');
+
+#查询
+SELECT * FROM student;
+
+【例3-10】
+UPDATE student
+set name='caocao',grade=50
+WHERE id=1;
+
+#查询
+SELECT * FROM student;
+
+【例3-11】
+UPDATE student
+SET grade=100
+WHERE id<4;
+
+#查询
+SELECT * FROM student;
+
+【例3-12】
+UPDATE student
+SET grade=80;
+
+#查询
+SELECT * FROM student;
+
+【例3-13】
+DELETE FROM student
+WHERE id=11;
+
+#查询
+SELECT * FROM student;
+
+【例3-14】
+DELETE FROM student
+WHERE id>5;
+
+#查询
+SELECT * FROM student;
+
+【例3-15】
+DELETE FROM student;
+
+#查询
+SELECT * FROM student;
+
+【例3-16】
+#建库
+CREATE TABLE tab_truncate(
+    id INT(3) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(4)
+);
+
+#插入数据
+INSERT INTO tab_truncate(name)
+VALUES('A'),('B'),('C'),('D'),('E');
+
+#删除记录
+TRUNCATE TABLE tab_truncate;
+
+#查询
+SELECT * FROM tab_truncate;
+
+【例3-17】
+#插入数据
+INSERT INTO tab_truncate(name)
+VALUES('F'),('G'),('H'),('I'),('J');
+
+#删除
+DELETE FROM tab_truncate;
+
+#插入数据
+INSERT INTO tab_truncate(name) VALUES('K');
+
+#查询
+SELECT * FROM tab_truncate;

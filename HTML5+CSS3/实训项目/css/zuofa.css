@@ -1,0 +1,223 @@
+header{   /*网站首页上的黑条的参数*/
+	width:96.95%;
+	height: 46px;
+	background: #000;
+}
+header .con{
+	width: auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+header .con .left{float: left; padding-left:0px;}/*黑条第一个选项的左间隔*/
+header .con .right{float: right; padding-right:0px;}/*登陆注册右侧间隔*/
+header .con .left li{
+	float: left;
+	height:46px;
+	line-height: 46px;
+	margin-right:100px; /*红条里的两个选项之间的间隔*/
+	color: #FFF;
+	cursor: pointer;
+}
+header .con .right li{
+	float: right;
+	height:46px;
+	line-height: 46px;
+	margin-left:50px;
+	color: #fff;
+	cursor: pointer;
+}
+header .con .right li a{color:#fff;}
+
+nav{
+	width:52.5%; /*橙色条在这里设置*/
+	height:55px;
+	position:absolute;
+	background:rgba(255,153,0,0.6);/*橙色的横条的颜色和透明度*/
+	z-index:10;
+}
+nav ul{float: left;}
+
+nav ul li{
+	float: left;
+	margin-right: 50px;
+	font-size: 18px;
+	height:55px;
+	line-height: 55px;
+}
+nav ul li:first-child a{
+	display:inline-block;
+	height:55px;
+	width:300px;
+	background:url(../images/LOGO.png) no-repeat center left;
+	}
+nav .nav_in ol{
+	float: right;
+	width:300px;
+	height: 55px;
+	font-family: "freshskin";
+}
+nav .nav_in ol li{
+	float: left;
+	width:32px;
+	height:32px;
+	line-height: 32px;
+	text-align: center;
+	color:#333;
+	box-shadow: 0 0 0 1px #333 inset;
+	transition:box-shadow 0.5s ease 0s; 
+	border-radius: 16px; 
+	margin:10px 0 0 30px;
+	cursor: pointer;
+}
+nav .nav_in ol li:hover{
+	box-shadow: 0 0 0 16px #fff inset; 
+	color:#333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.zuofa{
+	padding-left:50px;
+	padding-right:50px;}
+body {
+	min-width: 1000px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+	background: #fff;
+	text-align: justify;
+	color: #010000;
+	position: relative;
+}
+h1, h2, h3 {
+	font-weight: 500;
+}
+
+ul {
+	list-style-type: none;
+}
+em {
+	font-style: normal;
+}
+.lt {
+	float: left;
+}
+.rt {
+	float: right;
+	padding-right:100px;  /*配料图片右侧边距*/
+}
+.navBar{
+	float:left;
+	padding-left:100px;  /*配料文字左侧边距*/
+	}
+div.clear {
+	font: 0px Arial;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.right{float:right;}
+
+.wrapin {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	background: #cf2212;
+	line-height: 60px;
+	padding: 0 15px;
+}
+
+header .nav {
+	float: right;
+}
+
+header .nav li a {
+	color: #fff;
+}
+.banner {
+	width:960px;
+	height:150px;
+	font-size:36px;
+	background-color:#F90;
+    margin-right:15px;
+	float:left;
+	line-height:60px;
+	padding-left:10px;	
+}
+.banner li{list-style:none;
+            float:left;}
+.in_com {
+	background: #f4f8ff;
+	padding: 15px;
+	display: block;
+}
+.con_top{padding-top:40px;} /*内容距离最上面的距离*/
+.con_top .pic {
+	width: 300px;
+	float: left;
+}
+.con_top .pic img {
+	width: 100%;
+}
+.con_top .text {
+	float: right;
+	width: 650px;
+	line-height: 28px;
+	color: #333;
+}
+.title {
+	background: #598bd2;
+	line-height: 40px;
+	padding: 0 15px;
+	margin: 20px 0;
+}
+.title h2 {
+	font-size: 20px;
+	color: #fff;
+}
+.text_a {
+	line-height: 28px;
+	color: #333;
+}
+footer{
+	width:100%;
+	height:60px;
+	margin-top:80px;
+	background: #0a2536; 
+	color:#fff;
+	text-align: center;
+}
+footer .foot{
+	width:1000px;
+	height:60px;
+	margin:0 auto;
+	position: relative;
+}
+footer span{
+	width:58px;
+	height:32px;
+	line-height: 43px;
+	text-align: center;
+	color:#fff;
+	position: absolute;
+	top:-31px;
+	left:600px;
+	margin-left:-150px;
+	background: url(../images/sanjiao.png);
+}
+footer p{
+	line-height: 60px;
+}

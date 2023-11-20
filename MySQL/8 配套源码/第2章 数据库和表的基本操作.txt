@@ -1,0 +1,271 @@
+【例2-1】：
+CREATE DATABASE itcast;
+
+【例2-2】:
+SHOW DATABASES;
+
+【例2-3】:
+SHOW CREATE DATABASE itcast;
+
+【例2-4】:
+ALTER DATABASE itcast DEFAULT CHARACTER SET gbk COLLATE gbk_bin;
+
+【例2-5】:
+DROP DATABASE itcast;
+
+【例2-6】:
+#首先建库：
+CREATE DATABASE itcast;
+#然后建表：
+CREATE TABLE tb_grade
+(
+   id      INT(11),
+   name   VARCHAR(20),
+   grade   FLOAT
+);
+
+【例2-7】：
+SHOW CREATE TABLE tb_grade;
+
+【例2-8】
+DESCRIBE tb_grade;
+
+【例2-9】
+ALTER TABLE tb_grade RENAME TO grade;
+
+【例2-10】
+ALTER TABLE grade CHANGE name username VARCHAR(20);
+
+【例2-11】
+ALTER TABLE grade MODIFY id INT(20);
+
+【例2-12】
+ALTER TABLE grade ADD age INT(10);
+
+【例2-13】
+ALTER TABLE grade DROP age;
+
+【例2-14】
+ALTER TABLE grade MODIFY username VARCHAR(20) FIRST;
+
+【例2-15】
+ALTER TABLE grade MODIFY id INT(20) AFTER grade;
+
+【例2-16】
+DROP TABLE grade;
+
+【例2-17】
+CREATE TABLE example01( id INT PRIMARY KEY,
+                          name VARCHAR(20),
+                              grade FLOAT);
+
+【例2-18】
+CREATE TABLE example02( stu_id INT,
+                            course_id INT,
+                            grade FLOAT,
+                            PRIMARY KEY(stu_id,course_id)
+                            );
+【例2-19】
+CREATE TABLE example04( id INT PRIMARY KEY,
+                             name VARCHAR(20) NOT NULL,
+                             grade FLOAT);
+
+【例2-20】
+CREATE TABLE example05( id INT PRIMARY KEY,
+                             stu_id INT UNIQUE,
+                             name VARCHAR(20) NOT NULL
+                           );
+【例2-21】
+CREATE TABLE example06( id INT PRIMARY KEY AUTO_INCREMENT,
+                            stu_id INT UNIQUE,
+                            grade FLOAT DEFAULT 0
+);
+
+
+
+【例2-22】
+CREATE TABLE example05( id INT PRIMARY KEY AUTO_INCREMENT,
+                            stu_id INT UNIQUE,
+                            grade FLOAT
+);
+
+【例2-23】:
+CREATE TABLE t1(id INT,
+                   name VARCHAR(20),
+                    score FLOAT,  
+                    INDEX (id)
+                   );
+
+#查看表的结构：
+SHOW CREATE TABLE t1\G
+
+#使用EXPLAIN语句进行查看：
+EXPLAIN SELECT * FROM t1 WHERE id=1 \G
+
+【例2-24】:
+CREATE TABLE t2(id INT NOT NULL,
+                   name VARCHAR(20) NOT NULL,
+                   score FLOAT,  
+                   UNIQUE INDEX unique_id(id ASC)
+                   );
+
+#查看表的结构：
+SHOW CREATE TABLE t2\G
+
+
+【例2-25】:
+CREATE TABLE t3(id INT NOT NULL,
+                   name VARCHAR(20) NOT NULL,
+                   score FLOAT,  
+                   FULLTEXT INDEX fulltext_name(name)
+                   )ENGINE=MyISAM;
+
+#查看表的结构：
+SHOW CREATE TABLE t3\G
+
+【例2-26】:
+CREATE TABLE t4(id INT NOT NULL,
+                   name VARCHAR(20) NOT NULL,
+                   score FLOAT,  
+                   INDEX single_name(name(20))
+                   );
+
+#查看表的结构：
+SHOW CREATE TABLE t4\G
+
+【例2-27】:
+CREATE TABLE t5(id INT NOT NULL,
+                   name VARCHAR(20) NOT NULL,
+                   score FLOAT,  
+                   INDEX multi(id,name(20))
+                   );
+
+#查看表的结构：
+SHOW CREATE TABLE t5\G
+
+【例2-28】:
+CREATE TABLE t6(id INT,
+                   space GEOMETRY NOT NULL,
+                   SPATIAL INDEX sp(space) 
+                   )ENGINE=MyISAM;
+
+#查看表的结构：
+SHOW CREATE TABLE t6\G
+
+【例2-29】:
+CREATE INDEX index_id ON book(bookid);
+
+#查看表的结构：
+SHOW CREATE TABLE book \G
+
+【例2-30】:
+CREATE UNIQUE INDEX uniqueidx ON book(bookid);
+
+#查看表结构：
+ SHOW CREATE TABLE  book \G
+
+【例2-31】:
+CREATE INDEX singleidx ON book(comment);
+
+#查看表结构：
+ SHOW CREATE TABLE  book \G
+
+【例2-32】:
+CREATE INDEX mulitidx ON book(authors(20),info(20));
+
+查看表结构：
+ SHOW CREATE TABLE  book \G
+
+【例2-33】:
+#首先删除表book：
+DROP TABLE book;
+
+#然后重新创建表book：
+CREATE TABLE book (
+                       bookid  INT NOT NULL,
+                       bookname VARCHAR(255) NOT NULL,
+                       authors VARCHAR(255) NOT NULL,
+                       info VARCHAR(255) NULL,
+                       comment VARCHAR(255) NULL,
+                       publicyear YEAR NOT NULL
+                     )ENGINE=MyISAM;
+
+#在book表的info字段上创建名称为fulltextidx的全文索引：
+CREATE FULLTEXT INDEX fulltextidx ON book(info);
+
+#查看表结构：
+ SHOW CREATE TABLE  book \G
+
+【例2-34:
+#首先创建数据表t7，SQL语句如下：
+CREATE TABLE t7(
+                   g GEOMETRY NOT NULL
+                 )ENGINE=MyISAM;
+#使用CREATE INDEX语句在t7表的g字段上创建名称为spatidx的空间索引：
+CREATE SPATIAL INDEX spatidx ON t7(g);
+
+#查看表结构：
+SHOW CREATE TABLE  t7 \G
+
+【例2-35】
+ALTER TABLE book ADD INDEX index_id(bookid);
+
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-36】
+ALTER TABLE book ADD UNIQUE uniqueidx(bookid);
+
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-37】
+ALTER TABLE book ADD INDEX singleidx (comment(50));
+
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-38】
+ALTER TABLE book ADD INDEX multidx(authors(20),info(50));
+
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-39】
+#首先删除表book，SQL语句如下：
+DROP TABLE book;
+#然后重新创建表book，SQL语句如下：
+CREATE TABLE book (
+                       bookid  INT NOT NULL,
+                       bookname VARCHAR(255) NOT NULL,
+                       authors VARCHAR(255) NOT NULL,
+                       info VARCHAR(255) NULL,
+                       comment VARCHAR(255) NULL,
+                       publicyear YEAR NOT NULL
+                      )ENGINE=MyISAM;
+#使用ALTER TABLE语句在book表的info字段上创建名称为fulltextidx的全文索引：
+ALTER TABLE book ADD FULLTEXT INDEX fulltextidx(info);
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-40】
+#首先得创建数据表t8：
+CREATE TABLE t8(
+                  space GEOMETRY NOT NULL
+                )ENGINE=MyISAM;
+#使用ALTER TABLE语句在book表的space字段上创建名称为spatidx的空间索引：
+ALTER TABLE t8 ADD SPATIAL INDEX spatidx(space);
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-41】
+ALTER TABLE book DROP INDEX fulltextidx;
+
+#查看表的结构:
+ SHOW CREATE TABLE  book \G
+
+【例2-42】
+DROP INDEX spatidx ON t8;
+
+#查看表的结构:
+ SHOW CREATE TABLE  t8 \G

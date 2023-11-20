@@ -1,0 +1,135 @@
+----------------------------------------------------------------------------------------------------
+5.1	外键
+
+#建库
+CREATE DATABASE chapter05;
+
+#建表
+USE chapter05;
+
+CREATE TABLE grade(
+    id int(4) NOT NULL PRIMARY KEY,
+    name varchar(36) 
+);
+ 
+CREATE TABLE student(
+    sid int(4) NOT NULL PRIMARY KEY,
+    sname varchar(36),
+    gid int(4) NOT NULL
+);
+
+#student添加外键约束
+alter table student add constraint FK_ID foreign key(gid) REFERENCES grade (id);
+
+#查看学生表和班级表
+desc grade;
+
+desc student;
+
+#查看表的详细结构
+show create table student;
+
+#student中的外键约束删除
+alter table student drop foreign key FK_ID;
+----------------------------------------------------------------------------------------------------
+5.2	操作关联表
+
+#为表student和表grade中添加外键约束来建立两个表的关联关系
+alter table student add constraint FK_ID foreign key(gid) REFERENCES grade (id);
+
+#添加数据
+INSERT INTO grade(id,name)VALUES(1,'软件一班');
+INSERT INTO grade(id,name)VALUES(2,'软件二班');
+
+INSERT INTO student(sid,sname,gid)VALUES(1,'王红',1);
+INSERT INTO student(sid,sname,gid)VALUES(2,'李强',1);
+INSERT INTO student(sid,sname,gid)VALUES(3,'赵四',2);
+INSERT INTO student(sid,sname,gid)VALUES(4,'郝娟',2);
+
+
+#（1）在grade表中查询出班级名称为“软件一班”的id
+SELECT id FROM grade WHERE name='软件一班';
+
+#（2）在student表中，查询gid=1的学生，即为软件一班的学生，
+SELECT sname FROM student WHERE gid=1;
+
+#将软件一班的所有学生全部删除
+delete from student where sname='王红';
+delete from student where sname='李强';
+
+#在grade表中，将软件一班删除
+delete from grade where id=1;
+----------------------------------------------------------------------------------------------------
+5.3	连接查询
+
+#建表
+USE chapter05;
+CREATE TABLE department(
+    did int(4) NOT NULL PRIMARY KEY,
+    dname varchar(36) 
+);
+
+CREATE TABLE employee (
+    id int(4) NOT NULL PRIMARY KEY,
+    name varchar(36),
+    age int(2),
+    did int(4) NOT NULL
+);
+
+#添加数据
+
+INSERT INTO department(did,dname)VALUES(1,'网络部');
+INSERT INTO department(did,dname)VALUES(2,'媒体部');
+INSERT INTO department(did,dname)VALUES(3,'研发部');
+INSERT INTO department(did,dname)VALUES(5,'人事部');
+
+INSERT INTO employee(id,name,age,did)VALUES(1,'王红',20,1);
+INSERT INTO employee(id,name,age,did)VALUES(2,'李强',22,1);
+INSERT INTO employee(id,name,age,did)VALUES(3,'赵四',20,2);
+INSERT INTO employee(id,name,age,did)VALUES(4,'郝娟',20,4);
+
+
+【例5-1】 
+SELECT * FROM department CROSS JOIN employee;
+
+【例5-2】 
+SELECT employee.name, department.dname FROM department JOIN employee 
+ON department.did=employee.did;
+
+【例5-3】 
+SELECT employee.name, department.dname FROM department,employee 
+WHERE department.did=employee.did;
+
+【例5-4】
+SELECT p1.* FROM employee p1 JOIN employee p2 ON p1.did=p2.did WHERE p2.name='王红';
+
+【例5-5】
+SELECT department.did,department.dname,employee.name FROM department 
+LEFT JOIN employee on department.did=employee.did;
+
+【例5-6】
+SELECT department.did,department.dname,employee.name FROM department 
+RIGHT JOIN employee ON department.did=employee.did;
+
+【例5-7】
+SELECT employee.name, employee.age, department.dname FROM department JOIN employee 
+ON department.did=employee.did order by age;
+
+【例5-8】 
+SELECT * FROM department WHERE did IN(SELECT did FROM employee WHERE age=20);
+
+【例5-9】
+SELECT * FROM department WHERE did NOT IN(SELECT did FROM employee WHERE age=20);
+
+【例5-10】
+SELECT *  FROM department WHERE EXISTS(select did from employee where age > 21);
+
+【例5-11】
+SELECT * FROM department WHERE did>any(select did from employee);
+
+【例5-12】
+SELECT *  FROM department WHERE did>all(select did from employee);
+
+【例5-13】
+SELECT * FROM department WHERE did=(select did from employee where name='赵四');
+
