@@ -1,0 +1,13 @@
+1、HTML代码：
+
+<p>这是我的第一个网页哦。</p>
+
+2、CSS代码：
+
+<style type="text/css">
+	p{
+		font-size:36px;      /*设置字号为36像素*/
+		color:red;           /*设置字体颜色为红色*/
+		text-align:center;   /*设置文本居中显示*/
+	}
+</style>

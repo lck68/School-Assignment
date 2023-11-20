@@ -1,0 +1,7 @@
+h2{text-align:center;}       /*定义标题标签居中对齐*/
+p{                           /*定义段落标签的样式*/
+	font-size:16px;
+	font-family:"楷体";
+	color:purple;
+	text-decoration:underline;
+	}
