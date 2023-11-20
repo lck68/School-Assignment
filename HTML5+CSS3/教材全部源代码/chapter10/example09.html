@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>translate3D（）方法</title>
+<style type="text/css">
+div{
+	width:200px;
+	height:200px;
+	border:2px solid #000;
+	position:relative;
+	transition:all 1s ease 0s;           /*设置过渡效果*/
+	transform-style:preserve-3d;         /*保存嵌套元素的3D空间*/
+}
+img{
+	position:absolute;
+	top:0;
+	left:0;
+	transform:translateZ(100px);
+}
+.no2{
+	transform:rotateX(90deg) translateZ(100px);
+}
+div:hover{
+	transform:rotateX(-90deg);           /*设置旋转角度*/
+}
+</style>
+</head>
+<body>
+<div>
+	<img class="no1" src="1.png">
+	<img class="no2" src="2.png">
+</div>
+</body>
+</html>

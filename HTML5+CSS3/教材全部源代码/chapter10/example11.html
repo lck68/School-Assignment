@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>animation-duration 属性</title>
+<style type="text/css">
+div{
+	width:200px;
+	height:150px;
+	border-radius:50%;
+	background:#F60;
+	animation-name:mymove;        /*定义动画名称*/
+	animation-duration:8s;        /*定义动画时间*/
+	animation-iteration-count:2;  /*定义动画播放次数*/
+	animation-direction:alternate; /*动画逆向播放*/
+	}
+@keyframes mymove{
+	from {transform:translate(0) rotateZ(0deg);}
+	to {transform:translate(1000px) rotateZ(1080deg);}
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

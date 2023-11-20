@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title></title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="EditRegion4" -->
+<link rel="stylesheet" type="text/css" href="#">
+<!-- TemplateEndEditable -->
+</head>
+<body>
+<!--head begin-->
+<header id="head">
+	<div class="con">
+		<ul class="left">
+			<li>开课吧首页</li>
+			<li>创业微学院</li>
+			<li>摄影微学院</li>
+			<li>微聚</li>
+			<li>论坛</li>
+		</ul>
+		<ul class="right">
+			<li>APP下载</li>
+			<li>播放记录</li>
+			<li><a href="register.html">登录 | 注册</a></li>
+		</ul>
+	</div>
+</header>
+<!--head end-->
+<!--nav begin-->
+<nav>
+	<div class="nav_in">
+		<ul>
+			<li><a href="index.html"></a></li>		
+			<li><a href="user.html">个人中心</a></li>
+			<li><a href="video.html">视频播放</a></li>
+		</ul>
+		<ol>
+			<li>&#xe65e;</li>
+			<li>&#xe608;</li>
+			<li>&#xf012a;</li>
+			<li>&#xe68e;</li>
+		</ol>
+	</div>
+</nav>
+<!--nav end-->
+<!--content begin-->
+<!-- TemplateBeginEditable name="EditRegion3" -->
+<div class="content"></div>
+<!-- TemplateEndEditable -->
+<!--content end-->
+<!--footer begin-->
+<footer>
+	<div class="foot">
+		<a href="#head"><span>Top</span></a>
+		<p>Copyright©2015 开课吧 kaikeba.com 版权所有</p>
+	</div>
+</footer>
+<!--footer end-->
+</body>
+</html>

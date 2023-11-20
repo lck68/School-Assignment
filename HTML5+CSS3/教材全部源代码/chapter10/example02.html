@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transition-timing-function属性</title>
+<style type="text/css">
+div{
+	width:424px;
+	height:406px;
+	margin:0 auto;
+	background:url(HTML5.png) center center no-repeat;
+	border:5px solid #333;
+	border-radius:0px;	
+	}
+div:hover{
+	border-radius:50%;
+	transition-property:border-radius;  /*指定动画过渡的CSS属性*/
+	transition-duration:1s;  /*指定动画过渡的时间*/
+	transition-timing-function:ease-in-out;  /*指定动画过以慢速开始和结束的过渡效果*/
+	}
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

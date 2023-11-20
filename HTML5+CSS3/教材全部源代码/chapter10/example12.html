@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表情图片</title>
+<style>
+/*拼合静态样式*/
+body, ul, li, p, h1, h2, h3,img {margin:0; padding:0; border:0; list-style:none;}
+.lian {
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	background:#fcd671;
+	margin:100px auto;
+	position:relative;
+}
+.meimao{
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border-top:4px solid #000;
+}
+.meimao1{
+	position:absolute;
+	left:20%;
+	top:14%;
+	transform:rotate(20deg);
+}
+.meimao2{
+	position:absolute;
+	left:65%;
+	top:14%;
+	transform:rotate(-20deg);
+}	
+.yanjing{
+	width:70px;
+	height:20px;
+	background:#FFF;
+	border-radius:50%;
+}	
+.yanjing1{
+	position:absolute;
+	left:10%;
+	top:30%;
+}	
+.yanjing2{
+	position:absolute;
+	left:55%;
+	top:30%;
+}	
+span{
+	display:block;
+	width:12px;
+	height:12px;
+	background:#000;
+	border-radius:50%;
+	transform:translate(3px,4px);
+	animation: yanzhu 8s linear 2s infinite alternate;
+}
+.zui{
+	width:114px;
+	height:100px;
+	border-radius:50%;
+	border-bottom:3px solid #000;
+	position:absolute;
+	left:22%;
+	top:34%;
+	}
+@keyframes yanzhu
+{
+	from{transform:translate(3px,4px) scale(1);}      /*动画开始时的状态*/
+	10%{transform:translate(3px,4px) scale(1);}
+	30%{
+		transform:translate(24px,4px) scale(3);
+		opacity:0
+		}
+	31%{
+		transform:translate(24px,4px) scale(3);
+		opacity:1;
+		background:url(xin.png) center center no-repeat;
+		background-size:11px 9px;
+		}
+	69%{
+		transform:translate(24px,4px) scale(3);
+		opacity:1;
+		background:url(xin.png) center center no-repeat;
+		background-size:11px 9px;
+		}
+	70%{
+		transform:translate(24px,4px) scale(3);
+		opacity:0
+		}
+	80%{transform:translate(52px,4px) scale(1);}
+	to{transform:translate(52px,4px) scale(1);}
+}
+
+</style>
+</head>
+<body>
+<div class="lian">
+	<p class="meimao1 meimao"></p>
+    <p class="meimao2 meimao"></p>
+    <p class="yanjing1 yanjing">
+    	<span></span>
+    </p>
+    <p class="yanjing2 yanjing">
+    	<span></span>
+    </p>
+	<p class="zui"></p>
+</div>
+</body>
+</html>

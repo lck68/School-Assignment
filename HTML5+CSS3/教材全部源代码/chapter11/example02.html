@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绘制线</title>
+</head>
+<body>
+<canvas id="cas" width="300" height="300">
+    您的浏览器不支持canvas标签。
+</canvas>
+</body>
+</html>
+<script>
+    var context = document.getElementById("cas").getContext('2d');
+	context.beginPath(); /*开始路径*/
+	context.moveTo(10,100);//定义初始位置
+	context.lineTo(30,10);//定义连线端点
+	context.lineTo(50,100);//定义连线端点
+	context.strokestyle='red';
+	context.beginPath(); /*开始路径*/
+	context.lineTo(70,10);//定义连线端点
+	context.lineTo(90,100);//定义连线端点
+	context.stroke();//定义描边
+	context.strokestyle='red';
+</script>

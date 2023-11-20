@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>火柴人</title>
+</head>
+<body>
+	<canvas id="cas" width="1000" height="1000"></canvas>
+</body>
+</html>
+<script>
+	var cas=document.getElementById('cas');
+	var context=cas.getContext('2d');
+	//绘制头部
+	context.arc(400,100,30,0,2*Math.PI);
+	context.lineWidth='5';
+	context.stroke();
+	//绘制躯干
+	context.beginPath();
+	context.moveTo(400,130);
+	context.lineTo(400,140);
+	context.lineWidth='5';
+	context.stroke();
+	context.beginPath();
+	context.moveTo(400,140);
+	context.lineTo(400,260);
+	context.lineWidth='25';
+	context.stroke();
+	//绘制文件夹
+	context.beginPath();
+	context.moveTo(360,200);
+	context.lineTo(440,200);
+	context.lineTo(440,250);
+	context.lineTo(360,250);
+	context.closePath();
+	context.fillStyle='#fff';
+	context.fill();
+	context.lineWidth='2';
+	context.stroke();
+	//绘制手臂
+	context.beginPath();
+	context.moveTo(400,140);
+	context.lineTo(440,200);
+	context.lineTo(400,240);
+	context.lineWidth='10';
+	context.stroke();
+	context.beginPath();
+	context.arc(400,240,10,0,2*Math.PI);
+	context.fillStyle='#000';
+	context.fill();
+	//绘制腿部
+	context.beginPath();
+	context.moveTo(380,400);
+	context.lineTo(400,260);
+	context.lineTo(420,400);
+	context.lineTo(400,240);
+	context.lineWidth='10';
+	context.stroke();	
+	context.beginPath();
+	context.arc(365,400,15,0,1*Math.PI,true);
+	context.closePath();
+	context.lineWidth='5';
+	context.stroke();
+	context.beginPath();
+	context.arc(405,400,15,0,1*Math.PI,true);
+	context.closePath();
+	context.lineWidth='5';
+	context.stroke();
+</script>
+
