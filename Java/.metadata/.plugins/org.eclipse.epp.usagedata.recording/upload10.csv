@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196731001
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1698196732888
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.toggle.comment",1698196737432
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1698196745348
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196749023
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196763066
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196763103
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196763130
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1698196764948
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196768211
+started,bundle,org.eclipse.jpt.common.core,1.0.2.v201111103010,"org.eclipse.jpt.common.core",1698196771244
+started,bundle,org.eclipse.jpt.jpa.core,3.0.2.v201201243020,"org.eclipse.jpt.jpa.core",1698196771245
+started,bundle,org.eclipse.jst.jsp.ui,1.1.602.v201112071516,"org.eclipse.jst.jsp.ui",1698196771249
+started,bundle,org.eclipse.ant.ui,3.5.100.v20110510,"org.eclipse.ant.ui",1698196771255
+started,bundle,org.eclipse.wst.jsdt.debug.rhino.ui,1.0.1.v201201112313,"org.eclipse.wst.jsdt.debug.rhino.ui",1698196771263
+started,bundle,org.eclipse.wst.sse.core,1.1.602.v201112071516,"org.eclipse.wst.sse.core",1698196772681
+started,bundle,org.eclipse.jst.jsp.core,1.2.402.v201112071853,"org.eclipse.jst.jsp.core",1698196772694
+started,bundle,org.eclipse.dltk.core.manipulation,3.0.0.v20110609-1525,"org.eclipse.dltk.core.manipulation",1698196772733
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.300.v201104272153,"org.eclipse.wst.jsdt.manipulation",1698196772739
+started,bundle,org.eclipse.wst.jsdt.core,1.1.102.v201111090634,"org.eclipse.wst.jsdt.core",1698196772793
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.102.v201201131900,"org.eclipse.wst.jsdt.ui",1698196772816
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196772939
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.rename.element",1698196772947
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196777518
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1698196781620
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1698196784273
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1698196785225
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196787044
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1698196788634
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1698196788730
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196790091
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196791910
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196793441
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196794588
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196794643
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698196795898
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196798345
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196853418
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196865841
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1698196886861
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1698196887972
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196897983
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196929153
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196942909
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1698196944825
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196954442
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698196997730
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1698197004040
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197026945
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197028911
+error,log,,,"An internal error has occurred.",1698197028915
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197029678
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197030877
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197051161
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197055359
+error,log,,,"An internal error has occurred.",1698197055361
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197056526
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197057922
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197058691
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197058876
+error,log,,,"An internal error has occurred.",1698197058878
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197059979
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197061023
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197062091
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197062102
+error,log,,,"An internal error has occurred.",1698197062106
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197063226
+error,log,,,"Unhandled event loop exception",1698197064075
+error,log,,,"Error occurred during status handling",1698197064076
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197065784
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197066501
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197066514
+error,log,,,"An internal error has occurred.",1698197066516
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197067658
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1698197069441
+error,log,,,"Widget disposed too early for part org.eclipse.mylyn.tasks.ui.views.tasks",1698197070263
+error,log,,,"Widget disposed too early for part org.eclipse.ui.views.ContentOutline",1698197070264
+error,log,,,"An internal error has occurred.",1698197070751
+error,log,,,"An internal error has occurred.",1698197070752
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197070774
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197070904
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197071476
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197071487
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197071606
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197072379
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197072519
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197073293
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197073310
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197073558
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197074016
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197074695
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197074721
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197075288
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197075300
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197075413
+error,log,,,"An internal error has occurred.",1698197075635
+error,log,,,"An internal error has occurred.",1698197075637
+error,log,,,"An internal error has occurred.",1698197075637
+error,log,,,"An internal error has occurred.",1698197075637
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197075653
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197076399
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197076426
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197077147
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197077165
+error,log,,,"An internal error has occurred.",1698197077255
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197077281
+error,log,,,"An internal error has occurred.",1698197078518
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197078650
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197078674
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197079383
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197079394
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197079553
+error,log,,,"An internal error has occurred.",1698197080938
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197080969
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197080992
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197081802
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197081813
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197082018
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197082511
+error,log,,,"An internal error has occurred.",1698197084121
+error,log,,,"An internal error has occurred.",1698197084122
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197084237
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197084261
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197084957
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197084968
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197085097
+error,log,,,"An internal error has occurred.",1698197097370
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197097399
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197097584
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197098287
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197098299
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197098428
+error,log,,,"An internal error has occurred.",1698197100452
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197100483
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197100620
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197101339
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197101358
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197101397
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197102320
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197102351
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197103080
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197103097
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197103238
+error,log,,,"An internal error has occurred.",1698197112156
+error,log,,,"An internal error has occurred.",1698197112157
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197112286
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197113313
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197113347
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197113582
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197113627
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197113841
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197114137
+error,log,,,"An internal error has occurred.",1698197114931
+error,log,,,"An internal error has occurred.",1698197114931
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197114932
+error,log,,,"An internal error has occurred.",1698197115138
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197115139
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197115144
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197115177
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197115569
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197115621
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197115809
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197116020
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197116480
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197116725
+error,log,,,"An internal error has occurred.",1698197116927
+error,log,,,"An internal error has occurred.",1698197116927
+error,log,,,"An internal error has occurred.",1698197116928
+error,log,,,"An internal error has occurred.",1698197116928
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197116928
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197116932
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197117340
+error,log,,,"An internal error has occurred.",1698197118318
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197118361
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197119288
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197119322
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197119643
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197119658
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197119874
+error,log,,,"An internal error has occurred.",1698197123482
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197123482
+error,log,,,"An internal error has occurred.",1698197123512
+error,log,,,"An internal error occurred during: ""Match Job"".",1698197123513
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197123516
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197123545
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197124361
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197124379
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197124512
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197125128
+error,log,,,"An internal error has occurred.",1698197371979
+error,log,,,"An internal error has occurred.",1698197371980
+error,log,,,"An internal error has occurred.",1698197371980
+error,log,,,"An internal error has occurred.",1698197371980
+error,log,,,"An internal error has occurred.",1698197371980
+error,log,,,"An internal error has occurred.",1698197371981
+error,log,,,"An internal error has occurred.",1698197371981
+error,log,,,"An internal error has occurred.",1698197371981
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197372026
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197372162
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.text"".",1698197372769
+activated,perspective,org.eclipse.jdt.ui,,"org.eclipse.jdt.ui.JavaPerspective",1698197492883
+started,bundle,org.eclipse.osgi,3.7.1.R37x_v20110808-1106,"org.eclipse.osgi",1698197492884
+started,bundle,org.eclipse.equinox.simpleconfigurator,1.0.200.v20110502-1955,"org.eclipse.equinox.simpleconfigurator",1698197492887
+started,bundle,com.ibm.icu,4.4.2.v20110208,"com.ibm.icu",1698197492887
+started,bundle,org.eclipse.core.contenttype,3.4.100.v20110423-0524,"org.eclipse.core.contenttype",1698197492888
+started,bundle,org.eclipse.core.databinding.observable,1.4.0.I20110222-0800,"org.eclipse.core.databinding.observable",1698197492888
+started,bundle,org.eclipse.core.expressions,3.4.300.v20110228,"org.eclipse.core.expressions",1698197492889
+started,bundle,org.eclipse.core.filebuffers,3.5.200.v20110505-0800,"org.eclipse.core.filebuffers",1698197492889
+started,bundle,org.eclipse.core.filesystem,1.3.100.v20110423-0524,"org.eclipse.core.filesystem",1698197492890
+started,bundle,org.eclipse.core.jobs,3.5.100.v20110404,"org.eclipse.core.jobs",1698197492891
+started,bundle,org.eclipse.core.net,1.2.100.I20110511-0800,"org.eclipse.core.net",1698197492892
+started,bundle,org.eclipse.core.resources,3.7.100.v20110510-0712,"org.eclipse.core.resources",1698197492892
+started,bundle,org.eclipse.core.runtime,3.7.0.v20110110,"org.eclipse.core.runtime",1698197492893
+started,bundle,org.eclipse.core.runtime.compatibility,3.2.100.v20100505,"org.eclipse.core.runtime.compatibility",1698197492895
+started,bundle,org.eclipse.core.runtime.compatibility.auth,3.2.200.v20110110,"org.eclipse.core.runtime.compatibility.auth",1698197492895
+started,bundle,org.eclipse.debug.core,3.7.0.v20110518,"org.eclipse.debug.core",1698197492896
+started,bundle,org.eclipse.egit.core,1.1.0.201109151100-r,"org.eclipse.egit.core",1698197492929
+started,bundle,org.eclipse.egit.ui,1.1.0.201109151100-r,"org.eclipse.egit.ui",1698197492938
+started,bundle,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui",1698197492939
+started,bundle,org.eclipse.epp.usagedata.gathering,1.3.1.R201106061540,"org.eclipse.epp.usagedata.gathering",1698197492939
+started,bundle,org.eclipse.epp.usagedata.recording,1.3.1.R201106061540,"org.eclipse.epp.usagedata.recording",1698197492945
+started,bundle,org.eclipse.equinox.app,1.3.100.v20110321,"org.eclipse.equinox.app",1698197492945
+started,bundle,org.eclipse.equinox.common,3.6.0.v20110523,"org.eclipse.equinox.common",1698197492946
+started,bundle,org.eclipse.equinox.ds,1.3.1.R37x_v20110701,"org.eclipse.equinox.ds",1698197492946
+started,bundle,org.eclipse.equinox.event,1.2.100.v20110502,"org.eclipse.equinox.event",1698197492947
+started,bundle,org.eclipse.equinox.p2.core,2.1.0.v20110502-1955,"org.eclipse.equinox.p2.core",1698197492948
+started,bundle,org.eclipse.equinox.p2.directorywatcher,1.0.300.v20110502-1955,"org.eclipse.equinox.p2.directorywatcher",1698197492948
+started,bundle,org.eclipse.equinox.p2.engine,2.1.0.v20110511,"org.eclipse.equinox.p2.engine",1698197492951
+started,bundle,org.eclipse.equinox.p2.metadata,2.1.0.v20110510,"org.eclipse.equinox.p2.metadata",1698197492952
+started,bundle,org.eclipse.equinox.p2.metadata.repository,1.2.0.v20110511-1359,"org.eclipse.equinox.p2.metadata.repository",1698197492955
+started,bundle,org.eclipse.equinox.p2.operations,2.1.0.v20110511-1821,"org.eclipse.equinox.p2.operations",1698197492959
+started,bundle,org.eclipse.equinox.p2.reconciler.dropins,1.1.100.v20110510,"org.eclipse.equinox.p2.reconciler.dropins",1698197492960
+started,bundle,org.eclipse.equinox.p2.repository,2.1.0.v20110601,"org.eclipse.equinox.p2.repository",1698197492961
+started,bundle,org.eclipse.equinox.p2.ui.sdk.scheduler,1.0.100.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.scheduler",1698197492961
+started,bundle,org.eclipse.equinox.p2.updatechecker,1.1.200.v20110502-1955,"org.eclipse.equinox.p2.updatechecker",1698197492962
+started,bundle,org.eclipse.equinox.preferences,3.4.1.R37x_v20110725,"org.eclipse.equinox.preferences",1698197492962
+started,bundle,org.eclipse.equinox.registry,3.5.101.R37x_v20110810-1611,"org.eclipse.equinox.registry",1698197492963
+started,bundle,org.eclipse.equinox.security,1.1.1.R37x_v20110822-1018,"org.eclipse.equinox.security",1698197492969
+started,bundle,org.eclipse.equinox.util,1.0.300.v20110502,"org.eclipse.equinox.util",1698197492970
+started,bundle,org.eclipse.help,3.5.100.v20110426,"org.eclipse.help",1698197492970
+started,bundle,org.eclipse.jdt.core,3.7.1.v_B76_R37x,"org.eclipse.jdt.core",1698197492970
+started,bundle,org.eclipse.jdt.core.manipulation,1.4.0.v20110505-0800,"org.eclipse.jdt.core.manipulation",1698197492971
+started,bundle,org.eclipse.jdt.launching,3.6.1.v20110803_r371,"org.eclipse.jdt.launching",1698197492971
+started,bundle,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui",1698197492984
+started,bundle,org.eclipse.jface,3.7.0.I20110522-1430,"org.eclipse.jface",1698197492987
+started,bundle,org.eclipse.jgit,1.1.0.201109151100-r,"org.eclipse.jgit",1698197492987
+started,bundle,org.eclipse.jsch.core,1.1.300.I20110514-0800,"org.eclipse.jsch.core",1698197492987
+started,bundle,org.eclipse.m2e.logback.configuration,1.0.100.20110804-1717,"org.eclipse.m2e.logback.configuration",1698197492988
+started,bundle,org.eclipse.mylyn.bugzilla.core,3.6.2.v20110903-0100,"org.eclipse.mylyn.bugzilla.core",1698197492989
+started,bundle,org.eclipse.mylyn.bugzilla.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.bugzilla.ui",1698197492989
+started,bundle,org.eclipse.mylyn.commons.identity,0.8.0.v20110608-1400,"org.eclipse.mylyn.commons.identity",1698197492990
+started,bundle,org.eclipse.mylyn.commons.net,3.6.0.v20110608-1400,"org.eclipse.mylyn.commons.net",1698197492990
+started,bundle,org.eclipse.mylyn.commons.ui,3.6.1.v20110720-0100,"org.eclipse.mylyn.commons.ui",1698197492991
+started,bundle,org.eclipse.mylyn.context.core,3.6.1.v20110720-0100,"org.eclipse.mylyn.context.core",1698197492991
+started,bundle,org.eclipse.mylyn.context.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.context.ui",1698197492997
+started,bundle,org.eclipse.mylyn.monitor.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.monitor.ui",1698197492998
+started,bundle,org.eclipse.mylyn.tasks.ui,3.6.2.v20110826-0100,"org.eclipse.mylyn.tasks.ui",1698197493009
+started,bundle,org.eclipse.mylyn.team.ui,3.6.1.v20110825-0100,"org.eclipse.mylyn.team.ui",1698197493010
+started,bundle,org.eclipse.search,3.7.0.v20110505-0800,"org.eclipse.search",1698197493010
+started,bundle,org.eclipse.team.core,3.6.0.I20110525-0800,"org.eclipse.team.core",1698197493011
+started,bundle,org.eclipse.team.cvs.core,3.3.400.I20110510-0800,"org.eclipse.team.cvs.core",1698197493011
+started,bundle,org.eclipse.team.ui,3.6.100.I20110525-0800,"org.eclipse.team.ui",1698197493012
+started,bundle,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui",1698197493015
+started,bundle,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console",1698197493016
+started,bundle,org.eclipse.ui.editors,3.7.0.v20110517-0800,"org.eclipse.ui.editors",1698197493017
+started,bundle,org.eclipse.ui.forms,3.5.100.v20110425,"org.eclipse.ui.forms",1698197493017
+started,bundle,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.ide",1698197493027
+started,bundle,org.eclipse.ui.net,1.2.100.I20110511-0800,"org.eclipse.ui.net",1698197493027
+started,bundle,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views",1698197493029
+started,bundle,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.ui.views.log",1698197493031
+started,bundle,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"org.eclipse.ui.workbench",1698197493031
+started,bundle,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.workbench.texteditor",1698197493032
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1698197493033
+started,bundle,org.eclipse.update.core,3.2.500.v20110330,"org.eclipse.update.core",1698197493048
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1698197493048

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/DSJG226_03/src/dsj_2023_10_11/jishu_ji.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="dsj_2023_10_11.jishu_ji"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="DSJG226_03"/>
+</launchConfiguration>
