@@ -1,4 +1,3 @@
 *.class linguist-language=java
 *.xml linguist-language=java
-*.html linguist-language=html
-金字塔星星.html linguist-language=JavaScript
+*.js linguist-language=java
