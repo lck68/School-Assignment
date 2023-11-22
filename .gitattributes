@@ -1,3 +1,2 @@
-/HTML5+CSS3/* linguist-language=html
-/Java/* linguist-language=Java
-/JavaScript/* linguist-language=JavaScript
+*.js linguist-language=Java
+金字塔星星.html linguist-language=JavaScript
