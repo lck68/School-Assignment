@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<form action="31b.php" method="post">
+    <fieldset>
+        <legend>用户登录</legend>
+        <p>
+            用户名：<input type="text" name="username"/>
+        </p>
+        <p>
+            密码：<input type="text" name="pwd"/>
+        </p>
+        <p>
+            保存时间：<select name="saveTime">
+                <option value="0">不保存</option>
+                <option value="1">保存2小时</option>
+                <option value="2">保存2天</option>
+                <option value="3">保存2周</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="登录" name="btn"/>
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>
