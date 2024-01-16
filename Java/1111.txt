@@ -1,0 +1,56 @@
+Õý±¦Ëþ
+package DSJG226_03;
+
+public class Ks12 {
+	public static void main(String[] args) {
+		int i,j,k;
+		for (i=1;i<=5;i++){
+			for (j=1;j<=6-i;j++){
+				System.out.print(" ");
+			}
+			for (j=1;j<=2*i-1;j++){
+				System.out.print("$");
+			}
+			System.out.println("");
+		}
+	}
+}
+
+======================
+
+µ¹±¦Ëþ
+package DSJG226_03;
+
+public class Ks12 {
+	public static void main(String[] args) {
+		int i,j,k;
+		for (i=1;i<=5;i++){
+			for (j=1;j<=i;j++){
+				System.out.print(" ");
+			}
+			for (j=1;j<=2*(6-i)-1;j++){
+				System.out.print("$");
+			}
+			System.out.println("");
+		}
+	}
+}
+
+======================
+package DSJG226_03;
+
+public class Ks12_1 {
+	public static void main(String[] args) {
+		int i,j,k;
+		for (i=1;i<=5;i++){
+			for (j=1;j<=6-i;j++){
+				System.out.print(" ");
+			}
+			for (j=1;j<=i;j++){
+				System.out.print("$");
+			}
+			System.out.println("");
+		}
+	}
+
+}

@@ -1,0 +1,30 @@
+package 大数据G226_03;
+
+class Date
+{
+	int year;
+	public Date(int y)
+	{
+		year=y;
+	}
+}
+public class Item_11_15_2 {
+	public void swapDate(Date a1,Date a2)
+	{
+		int d=a1.year;
+		a1.year=a2.year;
+		a2.year=d;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Date d1=new Date(2000);
+		Date d2=new Date(3000);
+		Item_11_15_2 e= new Item_11_15_2();
+		System.out.println("没有调用swapDate之前：");
+		System.out.println("d1.year ="+d1.year+",d2.year="+d2.year);
+		e.swapDate(d1, d2);
+		System.out.println("调用swapDate之后：");
+		System.out.println("d1.year ="+d1.year+",d2.year="+d2.year);
+	}
+
+}

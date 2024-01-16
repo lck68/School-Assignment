@@ -1,0 +1,35 @@
+package 大数据G226_03;
+
+class StudentDY2_2{
+	String name;
+	int age;
+	String getName(){
+		return name;
+	}
+	void setName(String n){
+		name = n;
+	}
+	int getAge(){
+		return age;
+	}
+	void setAge(int a){
+		age = a;
+	}
+}
+
+public class Student2_2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentDY2_2 s = new StudentDY2_2();
+		s.setAge(20);
+		s.setName("李佳迪");
+		System.out.println("年龄为："+s.getAge());
+		System.out.println("姓名为："+s.getName());
+
+	}
+
+}
